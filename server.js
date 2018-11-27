@@ -23,9 +23,6 @@ app.use((req, res, next) => {
     });
     next();
 });
-app.use((req, res, next) => {
-    res.render("maintenance.hbs");
-});
 
 app.get("/", (req, res) => {
     // res.send("Hello World!");
@@ -39,6 +36,13 @@ app.get("/about", (req, res) => {
     // res.send("about me");
     res.render("about.hbs", {
         pageTitle: "About page"
+    });
+});
+
+app.get("/project", (req, res) => {
+    // res.send("about me");
+    res.render("project.hbs", {
+        pageTitle: "Project"
     });
 });
 
